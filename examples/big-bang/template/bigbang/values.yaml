@@ -1,0 +1,112 @@
+hostname: bigbang.run
+
+# -- Single set of registry credentials used to pull all images deployed by BigBang.
+# registryCredentials:
+#   registry: registry1.dso.mil
+#   username: ""
+#   password: ""
+
+git:
+  existingSecret: "zarf-git-secret"
+
+istio:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__istio-controlplane.git
+
+istiooperator:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__istio-operator.git
+
+jaeger:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__jaeger.git
+
+kiali:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__kiali.git
+
+clusterAuditor:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__cluster-auditor.git
+
+gatekeeper:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__policy.git
+
+logging:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__elasticsearch-kibana.git
+
+eckoperator:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__eck-operator.git
+
+fluentbit:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__fluentbit.git
+
+monitoring:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__monitoring.git
+
+twistlock:
+  git:
+    repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__security-tools__twistlock.git
+
+addons:
+  argocd:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__argocd.git
+
+  authservice:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__core__authservice.git
+
+  minioOperator:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__application-utilities__minio-operator.git
+
+  minio:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__application-utilities__minio.git
+
+  gitlab:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__developer-tools__gitlab.git
+
+  gitlabRunner:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__developer-tools__gitlab-runner.git
+
+  nexus:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__developer-tools__nexus.git
+
+  sonarqube:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__developer-tools__sonarqube.git
+  
+  haproxy:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__developer-tools__haproxy.git
+  
+  anchore:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__security-tools__anchore-enterprise.git
+  
+  mattermostoperator:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__collaboration-tools__mattermost-operator.git
+  
+  mattermost:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__collaboration-tools__mattermost.git
+  
+  velero:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__cluster-utilities__velero.git
+  
+  keycloak:
+    git:
+      repo: utility-cluster.zarf/zarf-git-user/mirror__repo1.dso.mil__platform-one__big-bang__apps__security-tools__keycloak.git
+  
