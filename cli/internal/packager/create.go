@@ -13,6 +13,7 @@ import (
 	"repo1.dso.mil/platform-one/big-bang/apps/product-tools/zarf/cli/internal/git"
 	"repo1.dso.mil/platform-one/big-bang/apps/product-tools/zarf/cli/internal/helm"
 	"repo1.dso.mil/platform-one/big-bang/apps/product-tools/zarf/cli/internal/images"
+	"repo1.dso.mil/platform-one/big-bang/apps/product-tools/zarf/cli/internal/sbom"
 	"repo1.dso.mil/platform-one/big-bang/apps/product-tools/zarf/cli/internal/utils"
 )
 
@@ -63,6 +64,7 @@ func Create(confirm bool) {
 		if len(remoteImageList) > 0 {
 			logrus.Info("Loading images for remote install")
 			images.PullAll(remoteImageList, tempPath.remoteImage)
+			sbom.CatalogPackagesInImages(remoteImageList, tempPath.remoteImage, tempPath.base)
 		}
 
 		if len(remoteRepoList) > 0 {
@@ -123,6 +125,7 @@ func addLocalAssets(tempPath tempPaths, assets config.ZarfFeature) {
 	if len(assets.Images) > 0 {
 		logrus.Info("Loading images for local install")
 		images.PullAll(assets.Images, tempPath.localImage)
+		sbom.CatalogPackagesInImages(assets.Images, tempPath.localImage, tempPath.base)
 	}
 
 	if assets.Manifests != "" {

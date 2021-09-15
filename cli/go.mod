@@ -4,6 +4,8 @@ go 1.16
 
 require (
 	github.com/AlecAivazis/survey/v2 v2.2.15
+	github.com/anchore/stereoscope v0.0.0-20210817160504-0f4abc2a5a5a
+	github.com/anchore/syft v0.23.0
 	github.com/containerd/containerd v1.5.4
 	github.com/fatih/color v1.12.0
 	github.com/go-git/go-git/v5 v5.4.2
@@ -15,6 +17,7 @@ require (
 	github.com/sirupsen/logrus v1.8.1
 	github.com/spf13/cobra v1.2.1
 	github.com/spf13/viper v1.8.1
+	github.com/wagoodman/go-partybus v0.0.0-20210627031916-db1f5573bbc5
 	helm.sh/helm/v3 v3.6.1-0.20210719095234-663c5698878c
 	k8s.io/api v0.21.2
 	k8s.io/apimachinery v0.21.2
